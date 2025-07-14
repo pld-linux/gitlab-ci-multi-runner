@@ -58,8 +58,8 @@ install -d src/$(dirname %{import_path})
 mv gitlab-ci-multi-runner-* src/%{import_path}
 cd src/%{import_path}
 
-%patch0 -p5
-%patch1 -p1
+%patch -P0 -p5
+%patch -P1 -p1
 
 # avoid docker being used even if executable found
 cat <<'EOF' > docker
